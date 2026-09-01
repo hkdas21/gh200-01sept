@@ -22,6 +22,8 @@ jobs:
           TARGET: ${{ vars.API_URL }}     # https://staging.myapp.com
           KEY:    ${{ secrets.API_KEY }}  # staging key
         run: |
+          echo "TARGET: $TARGET"
+          echo "$KEY"
           chmod +x scripts/greet.sh
           ./scripts/greet.sh --retries "$RETRY_COUNT"
 
@@ -36,6 +38,7 @@ jobs:
           TARGET: ${{ vars.API_URL }}     # https://myapp.com
           KEY:    ${{ secrets.API_KEY }}  # prod key
         run: |
+          echo "TARGET: $TARGET"
+          echo "$KEY"
           chmod +x scripts/greet.sh
           ./scripts/greet.sh --retries "$RETRY_COUNT"
-        
