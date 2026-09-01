@@ -1,0 +1,10 @@
+name: FirstWorkflow
+
+on: push
+
+jobs:
+  steup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello from GH-200 session!!!"
