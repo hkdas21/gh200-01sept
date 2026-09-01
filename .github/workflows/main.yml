@@ -8,3 +8,9 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello from GH-200 session!!!"
+
+      - name: Copy Code 
+        uses: actions/checkout@v5
+      
+      - name: List files
+        run: ls -la
